@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  transition: all ease 0.2s;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: hsl(210deg, 46%, 95%);
+  padding: 70px 24px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 500;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+p,
+figure,
+blockquote {
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+section {
+  cursor: pointer;
+}
+
+.container {
+  display: grid;
+  gap: 24px;
+  max-width: 1110px;
+}
+@media only screen and (min-width: 768px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .container .card-1 {
+    grid-column: 1/span 2;
+  }
+  .container .card-3 {
+    grid-column: 1/2;
+  }
+  .container .card-4 {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    grid-column: 1/span 2;
+  }
+  .container .card-5 {
+    grid-column: 2/3;
+    grid-row: 2/span 2;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .container .card-1 {
+    grid-column: 1/span 2;
+  }
+  .container .card-3 {
+    grid-column: 1/2;
+  }
+  .container .card-4 {
+    grid-column: 2/span 2;
+    grid-row: 2;
+  }
+  .container .card-5 {
+    grid-column: 4/5;
+    grid-row: 1/span 2;
+  }
+}
+.container__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: hsl(263deg, 55%, 52%);
+  padding: 24px 36px 36px;
+  border-radius: 10px;
+  box-shadow: 0rem 1.6rem 3.2rem rgba(102, 108, 163, 0.2);
+}
+.container__card:hover {
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+  transform: scale(1.02);
+}
+
+.card__quote {
+  position: absolute;
+  top: 0;
+  right: 24px;
+}
+@media only screen and (min-width: 1440px) {
+  .card__quote {
+    right: 80px;
+  }
+}
+.card__profile {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  padding-bottom: 15px;
+}
+.card__profile img {
+  max-width: 32px;
+  max-height: 32px;
+  border-radius: 50%;
+}
+.card__profile .info__name {
+  font-size: 13px;
+}
+.card__profile .info__title {
+  font-size: 11px;
+  opacity: 0.5;
+}
+.card__testimonial {
+  z-index: 9;
+}
+.card__testimonial h1 {
+  font-size: 20px;
+  line-height: 1.2;
+  padding-bottom: 20px;
+}
+.card__testimonial blockquote {
+  opacity: 0.5;
+}
+
+.card-1-avatar {
+  border: 2px solid hsla(0deg, 0%, 100%, 0.3);
+}
+
+.card-2-avatar {
+  border: 2px solid hsla(0deg, 0%, 100%, 0.3);
+}
+
+.card-3-avatar {
+  border: 2px solid hsl(217deg, 19%, 35%);
+}
+
+.card-4-avatar {
+  border: 2px solid hsl(263deg, 55%, 52%);
+}
+
+.card-2 {
+  background-color: hsl(217deg, 19%, 35%);
+}
+
+.card-3,
+.card-5 {
+  background-color: hsl(0deg, 0%, 100%);
+}
+
+.card-4 {
+  background-color: hsl(217deg, 30%, 14%);
+}
+
+.dark-txt {
+  color: hsl(217deg, 19%, 35%);
+}

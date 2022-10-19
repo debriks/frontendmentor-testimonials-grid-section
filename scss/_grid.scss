@@ -1,0 +1,152 @@
+.container {
+  display: grid;
+  gap: 24px;
+  max-width: 1110px;
+
+  @media only screen and (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+
+    .card-1 {
+      grid-column: 1 / span 2;
+    }
+
+    .card-3 {
+      grid-column: 1/2;
+    }
+
+    .card-4 {
+      // height: fit-content;
+      grid-column: 1 / 2;
+      grid-row: 4 / 5;
+      grid-column: 1 / span 2;
+    }
+
+    .card-5 {
+      grid-column: 2 / 3;
+      grid-row: 2 / span 2;
+    }
+  }
+
+  @media only screen and (min-width: 1440px) {
+    grid-template-columns: repeat(4, 1fr);
+
+    .card-1 {
+      grid-column: 1 / span 2;
+    }
+
+    .card-3 {
+      grid-column: 1/2;
+    }
+
+    .card-4 {
+      // height: fit-content;
+      grid-column: 2 / span 2;
+      grid-row: 2;
+    }
+
+    .card-5 {
+      grid-column: 4 / 5;
+      grid-row: 1 / span 2;
+    }
+  }
+
+  &__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: $moderateViolet;
+    padding: 24px 36px 36px;
+    border-radius: 10px;
+    box-shadow: 0rem 1.6rem 3.2rem rgba(102, 108, 163, 0.2);
+
+    &:hover {
+      cursor: pointer;
+      transition: ease-in-out 0.3s;
+      transform: scale(1.02);
+    }
+  }
+}
+
+.card {
+  &__quote {
+    position: absolute;
+    top: 0;
+    right: 24px;
+
+    @media only screen and (min-width: 1440px) {
+      right: 80px;
+    }
+  }
+
+  &__profile {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    padding-bottom: 15px;
+
+    & img {
+      max-width: 32px;
+      max-height: 32px;
+      border-radius: 50%;
+    }
+
+    .info {
+      &__name {
+        font-size: $fs-13;
+      }
+
+      &__title {
+        font-size: 11px;
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &__testimonial {
+    z-index: 9;
+
+    h1 {
+      font-size: $fs-20;
+      line-height: 1.2;
+      padding-bottom: 20px;
+    }
+
+    blockquote {
+      opacity: 0.5;
+    }
+  }
+}
+
+.card-1-avatar {
+  border: 2px solid $borderPurple;
+}
+
+.card-2-avatar {
+  border: 2px solid $borderGray;
+}
+
+.card-3-avatar {
+  border: 2px solid $veryDarkGrayishBlue;
+}
+
+.card-4-avatar {
+  border: 2px solid $moderateViolet;
+}
+
+.card-2 {
+  background-color: $veryDarkGrayishBlue;
+}
+
+.card-3,
+.card-5 {
+  background-color: $white;
+}
+
+.card-4 {
+  background-color: $veryDarkBlackishBlue;
+}
+
+.dark-txt {
+  color: $veryDarkGrayishBlue;
+}

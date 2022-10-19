@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  transition: all ease 0.2s;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $lightgrayishBlue;
+  padding: 70px 24px;
+  font-family: $primaryFont;
+  font-size: $fs-13;
+  line-height: 1.4;
+  font-weight: $fw-500;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+p,
+figure,
+blockquote {
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+section {
+  cursor: pointer;
+}
